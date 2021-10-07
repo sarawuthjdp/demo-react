@@ -4,10 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const data =  <h1>สวัสดี</h1>
+function HelloComponent(){
+  return <h1>Hello World!</h1>
+}
 
 ReactDOM.render(
-  data,
+  <HelloComponent/>,
   document.getElementById('root')
 );
 
