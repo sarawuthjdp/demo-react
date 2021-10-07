@@ -1,8 +1,6 @@
-import React from "react";
-
 function App() {
   return (
-    <React.Fragment>
+    <>
       <article>
         <h1>โปรแกรมบัญชีรายรับ - รายจ่าย</h1>
         <p>บันทึกข้อมูลบัญชีในแต่ละวัน</p>
@@ -18,7 +16,7 @@ function App() {
           </li>
         </ul>
       </article>
-    </React.Fragment>
+    </>
   );
 }
 
