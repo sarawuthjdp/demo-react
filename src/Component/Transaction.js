@@ -1,13 +1,17 @@
 import Item from "./Item";
-import './Transaction.css'
+import "./Transaction.css";
 
-const Transaction = () => (
-  <ul className='item-list'>
-    <Item title="ค่ารักษาพยาบาล" amount="2000"></Item>
-    <Item title="เงินเดือน" amount="50000"></Item>
-    <Item title="ค่าเดินทาง" amount="500"></Item>
-    <Item title="ค่าเช่าห้อง" amount="8000"></Item>
-  </ul>
-);
+const Transaction = () => {
+  const data = [
+    {title:'ค่ารักษาพยาบาล',amount:2000},
+    {title:'ค่าน้ำมัน',amount:5000},
+    {title:'ค่าเช่าบ้าน',amount:8000},
+  ]
+  return (
+    <ul className="item-list">
+      {data.map((element)=><Item title={element.title} amount={element.amount}></Item>)}
+    </ul>
+  );
+};
 
 export default Transaction;
