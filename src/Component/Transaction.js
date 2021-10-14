@@ -1,7 +1,8 @@
 import Item from "./Item";
+import './Transaction.css'
 
 const Transaction = () => (
-  <ul>
+  <ul className='item-list'>
     <Item></Item>
     <Item></Item>
     <Item></Item>
