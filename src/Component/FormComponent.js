@@ -14,7 +14,11 @@ const FormComponent = ()=>{
     }
     const saveItem = (event)=>{
         event.preventDefault();
-        console.log(title, amount);
+        const itemData = {
+            title: title,
+            amount: amount
+        }
+        console.log(itemData);
     }
     return (
         <div>
