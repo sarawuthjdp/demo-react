@@ -16,20 +16,22 @@ const FormComponent = ()=>{
         event.preventDefault();
         const itemData = {
             title: title,
-            amount: amount
+            amount: Number(amount)
         }
         console.log(itemData);
+        setTitle('')
+        setAmount(0)
     }
     return (
         <div>
             <form onSubmit={saveItem}>
                 <div className="form-control">
                     <label>ชื่อรายการ</label>
-                    <input type="text" placeholder="ระบุชื่อรายการของคุณ" onChange={inputTitle}/>
+                    <input type="text" placeholder="ระบุชื่อรายการของคุณ" onChange={inputTitle} value={title}/>
                 </div>
                 <div className="form-control">
                     <label>จำนวนเงิน</label>
-                    <input type="number" placeholder="(+ รายรับ, - รายจ่าย)" onChange={inputAmount}/>
+                    <input type="number" placeholder="(+ รายรับ, - รายจ่าย)" onChange={inputAmount} value={amount}/>
                 </div>
                 <div className="form-control">
                     <button type="submit" className="btn">เพิ่มข้อมูล</button>
