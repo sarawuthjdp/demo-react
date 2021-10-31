@@ -6,9 +6,7 @@ function App() {
   const design = { color: "red", textAlign: "center", fontSize: "1.5rem" };
   const [items, setItems] = useState([])
   const onAddNewItem = (newItems)=>{
-    setItems((prevItem)=>{
-      return [newItems,...prevItem];
-    });
+    setItems([newItems,...items]);
   }
 
   return (
