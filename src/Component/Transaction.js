@@ -1,16 +1,16 @@
+import { useContext } from "react";
+import DataContext from "../data/DataContext";
 import Item from "./Item";
 import "./Transaction.css";
-import DataContext from "../data/DataContext";
-import { useContext } from "react";
 const Transaction = (props) => {
   const {items} = props;
-  const name = useContext(DataContext);
+  const {income, expense} = useContext(DataContext);
   return (
     <>
       <ul className="item-list">
         {items.map((element)=><Item {...element} key={element.id}></Item>)}
       </ul>
-      {name}
+      <p>รายรับ : {income} รายจ่าย : {expense}</p>
     </>
   );
 };

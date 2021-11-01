@@ -12,7 +12,7 @@ function App() {
   }
 
   return (
-    <DataContext.Provider value={"user"}>
+    <DataContext.Provider value={{income:50000,expense:-8000}}>
       <div div className='container'>
         <h1 style={design}>แอพบัญชีรายรับ - รายจ่าย</h1>
         <ReportComponent/>
