@@ -43,7 +43,7 @@ function App() {
               <Route path='/' exact>
                 <ReportComponent/>
               </Route>
-              <Route patch='/insert'>
+              <Route path='/insert'>
                 <FormComponent onAddItem={onAddNewItem}></FormComponent>
                 <Transaction items={items}></Transaction>
               </Route>
